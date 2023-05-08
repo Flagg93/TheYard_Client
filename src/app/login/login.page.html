@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>The Yard: Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1>Welcome Back!</h1>
+      </ion-col> 
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-input label="Email:" type="Email" [clearInput]="true" name="email"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-input label="Password:" type="password" [clearInput]="true" name="password"></ion-input>
+          </ion-item>
+
+        
+        </ion-list>
+      </ion-col> 
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="submit()">Login</ion-button>
+      </ion-col> 
+      
+    </ion-row>
+  </ion-grid>
+</ion-content>

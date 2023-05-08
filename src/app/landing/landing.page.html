@@ -1,0 +1,34 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>The Yard</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" padding="true">
+  <ion-grid>
+    <ion-row>
+      <ion-col offset="4">
+        <h1>Welcome to The Yard!</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col offset="4">
+        <ion-img src="" alt="TheYardLogo.png"></ion-img>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h3>New User?</h3>
+        <ion-button expand="block" (click)="GoToSignUp()">Sign Up</ion-button> 
+      </ion-col>
+      
+      
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h3>Existing User?</h3>
+        <ion-button expand="block" (click)="GoToLogin()">Login</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>  
+</ion-content>
