@@ -31,7 +31,7 @@ export class SignupPage implements OnInit {
         alert("Warning! emails don't match!");
       }
       else{
-        this.a
+        this.auth.CreateUser(this.email,btoa(this.password),this.fullName,this.displayName);
 
       }
     }

@@ -1,9 +1,11 @@
 import { Routes } from '@angular/router';
+import {AuthService} from './auth.service'
 
 export const routes: Routes = [
   {
     path: 'home',
     loadChildren: () => import('./tabs/tabs.routes').then((m) => m.routes),
+    canActivate: [AuthService]
   },
   {
     path: 'login',
