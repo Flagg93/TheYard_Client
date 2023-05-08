@@ -5,9 +5,49 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">signup</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <h1>We're glad you're here!</h1>
+      </ion-col> 
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <h2>We just need some information about you first!</h2>
+      </ion-col> 
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <ion-input label="Full Name:" type="name" [clearInput]="true" [(ngModel)]="fullName"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Display Name:" [clearInput]="true" [(ngModel)]="displayName"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Email:" type="Email" [clearInput]="true" [(ngModel)]="email"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Confirm Email:" type="Email" [clearInput]="true" [(ngModel)]="email_confirm"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-input label="Password:" type="password" [clearInput]="true" [(ngModel)]="password"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-input label="Confirm Password:" type="password" [clearInput]="true" [(ngModel)]="password_confirm"></ion-input>
+          </ion-item>
+
+        
+        </ion-list>
+      </ion-col> 
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-button expand="block" (click)="submit()">Join Now!</ion-button>
+      </ion-col> 
+      
+    </ion-row>
+  </ion-grid>
 </ion-content>

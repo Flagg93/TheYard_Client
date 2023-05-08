@@ -1,6 +1,7 @@
 import { Injectable,Component } from '@angular/core';
 
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -15,11 +16,11 @@ export class ServerService {
     if(id != -1){
       req += "/" + id;
     }
-    return this.http.get(req);
+    return this.http.get(req,{observe:'response'});
   }
 
-  postRequest(objectType: string, body: string){
+  postRequest(objectType: string, body: string):Observable<HttpResponse<any>>{
     let req:string = this.serverAddress + objectType;
-    return this.http.post(req,body);
+    return this.http.post(req,body,{observe:'response'});
   }
 }
