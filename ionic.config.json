@@ -1,7 +1,0 @@
-{
-  "name": "theyard",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
